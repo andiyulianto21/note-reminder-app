@@ -91,7 +91,7 @@ class NewNoteDialogFragment : DialogFragment() {
         TimePickerDialog(
             requireActivity(),
             timeSetListener,
-            calendar.get(Calendar.HOUR),
+            calendar.get(Calendar.HOUR_OF_DAY),
             calendar.get(Calendar.MINUTE),
             true
         ).show()
