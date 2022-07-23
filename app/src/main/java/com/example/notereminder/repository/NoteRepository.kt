@@ -2,6 +2,7 @@ package com.example.notereminder.repository
 
 import android.content.Context
 import androidx.lifecycle.LiveData
+import com.example.notereminder.dao.NoteDao
 import com.example.notereminder.model.Note
 import com.example.notereminder.room.NoteDatabase
 import kotlinx.coroutines.CoroutineScope
@@ -12,7 +13,6 @@ import kotlin.coroutines.coroutineContext
 
 class NoteRepository {
 
-    companion object {
         private var noteDatabase : NoteDatabase? = null
         private var noteList: LiveData<List<Note>>? = null
         
@@ -44,6 +44,5 @@ class NoteRepository {
                 initializeDb(context).noteDao.deleteNote(note)
             }
         }
-    }
 
 }

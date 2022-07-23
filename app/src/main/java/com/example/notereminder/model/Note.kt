@@ -8,8 +8,8 @@ import java.util.Calendar
 @Entity(tableName = "note")
 data class Note (
     @PrimaryKey(autoGenerate = true)
-    @ColumnInfo(name = "id") val id: Int,
+    @ColumnInfo(name = "id") val id: Int = 0,
     @ColumnInfo(name = "title") val title: String,
     @ColumnInfo(name = "content") val content: String?,
-    @ColumnInfo(name = "date_time") val dateTime: Calendar
+    @ColumnInfo(name = "date_time") val dateTime: String
 )
